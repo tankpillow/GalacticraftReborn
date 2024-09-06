@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "galacticraft-reborn",
+	"version": "${version}",
+	"name": "Galacticraft Reborn",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/galacticraft-reborn/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"me.tankpillow.galacticraft.GalacticraftReborn"
+		],
+		"client": [
+			"me.tankpillow.galacticraft.GalacticraftRebornClient"
+		],
+		"fabric-datagen": [
+			"me.tankpillow.galacticraft.GalacticraftRebornDataGenerator"
+		]
+	},
+	"mixins": [
+		"galacticraft-reborn.mixins.json",
+		{
+			"config": "galacticraft-reborn.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.4",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
